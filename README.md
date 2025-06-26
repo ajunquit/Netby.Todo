@@ -18,12 +18,7 @@ El proyecto está compuesto por:
 ---
 
 ## 📦 **Estructura del repositorio**
-
-```
 ![image](https://github.com/user-attachments/assets/17f67543-9b75-4f9b-91d2-2d9aeff62760)
-
-```
-
 ---
 
 ## ⚡ **Primeros pasos**
