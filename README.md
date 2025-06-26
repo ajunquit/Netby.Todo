@@ -88,7 +88,7 @@ dotnet run
    ```csharp
    builder.Services.AddHttpClient("TodoApi", client =>
    {
-       client.BaseAddress = new Uri("https://localhost:7077/api/");
+       client.BaseAddress = new Uri("https://localhost:7077/api/v1/");
    });
    ```
 
