@@ -1,4 +1,6 @@
-using Netby.Todo.Persistence; 
+using Netby.Todo.Persistence;
+using Netby.Todo.Application;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,7 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services
-    .AddPersistenceModule(builder.Configuration);
+    .AddPersistenceModule(builder.Configuration)
+    .AddApplicationModule(builder.Configuration);
 
 var app = builder.Build();
 
