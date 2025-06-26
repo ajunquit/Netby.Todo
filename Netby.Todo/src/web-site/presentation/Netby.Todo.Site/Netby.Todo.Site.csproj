@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Task\" />
+    <ProjectReference Include="..\..\infrastructure\Netby.Todo.Site.API\Netby.Todo.Site.API.csproj" />
   </ItemGroup>
 
 </Project>

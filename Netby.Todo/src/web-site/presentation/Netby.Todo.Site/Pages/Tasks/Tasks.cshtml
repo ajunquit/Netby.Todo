@@ -1,0 +1,39 @@
+﻿@page
+@model Netby.Todo.Site.Pages.Tasks.TasksModel
+@{
+    ViewData["Title"] = "Tareas";
+}
+<h1>Tareas</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Expiration Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.Tasks)
+        {
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>@task.ExpirationDate.ToShortDateString()</td>
+                <td>@task.Status</td>
+                <td>
+                    <!-- Botones para Editar y Eliminar -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Formulario para crear tarea rápida -->
+<form method="post">
+    <input asp-for="NewTask.Title" placeholder="Title" required />
+    <input asp-for="NewTask.Description" placeholder="Description" required />
+    <input asp-for="NewTask.ExpirationDate" type="date" required />
+    <button type="submit">Agregar</button>
+</form>
