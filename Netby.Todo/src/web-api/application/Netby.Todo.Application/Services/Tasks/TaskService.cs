@@ -3,6 +3,7 @@ using Netby.Todo.Application.Services.Tasks.Common;
 using Netby.Todo.Application.Services.Tasks.Create;
 using Netby.Todo.Application.Services.Tasks.Update;
 using Netby.Todo.Domain.Entities;
+using Netby.Todo.Domain.Exceptions;
 
 namespace Netby.Todo.Application.Services.Tasks
 {
@@ -27,7 +28,7 @@ namespace Netby.Todo.Application.Services.Tasks
         public async Task<TaskResponse> UpdateTaskAsync(Guid id, UpdateTaskRequest request)
         {
             var taskItem = _unitOfWork.Tasks.Get(id);
-            if (taskItem == null) return null; // lanzar exception mejor
+            if (taskItem == null) throw new NotFoundException("Not found Task Item");
 
             taskItem.Title = request.Title;
             taskItem.Description = request.Description;
