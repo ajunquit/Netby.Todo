@@ -147,6 +147,52 @@ Database
 
 ---
 
+## 📋 Características destacadas
+
+- Arquitectura limpia: Backend desacoplado y frontend separado
+- **Logging estructurado y transversal con [Serilog](https://serilog.net/):**  
+  Toda la solución utiliza Serilog para registrar logs estructurados, tanto en consola como en archivos (`logs/`).  
+  Puedes encontrar los logs en la carpeta `logs/` de cada proyecto.  
+  Es posible loguear desde cualquier capa simplemente inyectando `ILogger<T>`.
+
+---
+
+## 📝 **Configuración de Logging (Serilog)**
+
+- Serilog está configurado en ambos proyectos (`Netby.Todo.API` y `Netby.Todo.Site`) a través de `appsettings.json`.
+- Los logs se escriben en consola y en archivos diarios.
+- Puedes ajustar el nivel de logueo y sinks editando la sección `"Serilog"` en el archivo de configuración.
+
+**Ejemplo de configuración en `appsettings.json`:**
+
+```json
+"Serilog": {
+  "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
+  "MinimumLevel": {
+    "Default": "Information",
+    "Override": {
+      "Microsoft": "Warning",
+      "System": "Warning"
+    }
+  },
+  "WriteTo": [
+    { "Name": "Console" },
+    {
+      "Name": "File",
+      "Args": {
+        "path": "logs/log-.txt",
+        "rollingInterval": "Day"
+      }
+    }
+  ],
+  "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId" ],
+  "Properties": {
+    "Application": "NetbyTodo"
+  }
+}
+
+---
+
 ## 🛠️ **Notas adicionales**
 
 - Puedes cambiar el puerto de la API o del frontend desde `launchSettings.json` de cada proyecto.
