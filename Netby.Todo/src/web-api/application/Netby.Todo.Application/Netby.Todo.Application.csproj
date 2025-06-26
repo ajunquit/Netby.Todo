@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Netby.Todo.Domain\Netby.Todo.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
