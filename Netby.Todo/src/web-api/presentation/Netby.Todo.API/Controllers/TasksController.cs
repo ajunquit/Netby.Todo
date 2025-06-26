@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Netby.Todo.Application.Services.Tasks;
 using Netby.Todo.Application.Services.Tasks.Common;
 using Netby.Todo.Application.Services.Tasks.Create;
@@ -8,6 +9,7 @@ namespace Netby.Todo.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TasksController : ControllerBase
     {
         private readonly ITaskService _taskService;
