@@ -7,9 +7,10 @@ using Netby.Todo.Application.Services.Tasks.Update;
 
 namespace Netby.Todo.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     [Authorize]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class TasksController : ControllerBase
     {
         private readonly ITaskService _taskService;

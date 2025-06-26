@@ -18,6 +18,9 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<NetbyDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddApiVersioning();
+builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Netby.Todo.API", Version = "v1" });
