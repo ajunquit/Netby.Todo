@@ -133,8 +133,6 @@ dotnet test
 ---
 
 ## 📸 **Capturas**
-
-<sub>*Incluye aquí capturas de pantalla del frontend y de Swagger mostrando tu app funcionando*</sub>
 API
 ![image](https://github.com/user-attachments/assets/df927f94-471c-4664-aa3c-014f26548f66)
 
