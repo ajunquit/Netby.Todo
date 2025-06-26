@@ -4,6 +4,7 @@ using Netby.Todo.API.Extensions;
 using Netby.Todo.Application;
 using Netby.Todo.Persistence;
 using Netby.Todo.Persistence.Contexts;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 
 builder.Services.AddApiVersioning();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Host.UseSerilog((ctx, lc) => lc.ReadFrom.Configuration(ctx.Configuration));
 
 builder.Services.AddSwaggerGen(c =>
 {

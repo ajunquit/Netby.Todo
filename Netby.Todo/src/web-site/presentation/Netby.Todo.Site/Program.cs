@@ -1,4 +1,5 @@
 using Netby.Todo.Site.API;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddHttpClient("TodoApi", client =>
     client.BaseAddress = new Uri("https://localhost:7077/api/v1/"); // Todo: Obtener desde el appsettings
 });
 
+builder.Host.UseSerilog((ctx, lc) => lc.ReadFrom.Configuration(ctx.Configuration));
 
 // para hacer login
 builder.Services.AddSession();
