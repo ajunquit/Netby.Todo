@@ -135,6 +135,27 @@ dotnet test
 ## 📸 **Capturas**
 
 <sub>*Incluye aquí capturas de pantalla del frontend y de Swagger mostrando tu app funcionando*</sub>
+API
+![image](https://github.com/user-attachments/assets/df927f94-471c-4664-aa3c-014f26548f66)
+
+Web
+![image](https://github.com/user-attachments/assets/6a7de2c7-5f68-4869-bb3d-374b2b62f5fe)
+
+Task
+![image](https://github.com/user-attachments/assets/5986adeb-8e5c-4e81-b0a7-561157262d8e)
+
+Create/Edit Task
+![image](https://github.com/user-attachments/assets/cf1ea3b9-cfe4-410a-aaad-87e8b8df3bde)
+![image](https://github.com/user-attachments/assets/a4ea9fab-6497-4d49-b71c-ffb35b737e73)
+
+
+Delete Task
+![image](https://github.com/user-attachments/assets/529edb5e-eede-4925-9e67-d51d84a87b87)
+
+Database
+![image](https://github.com/user-attachments/assets/7678a11e-3305-4309-a623-b89fad115e30)
+![image](https://github.com/user-attachments/assets/25f73c4e-a300-4207-9fc2-b1a39813772f)
+
 
 ---
 
