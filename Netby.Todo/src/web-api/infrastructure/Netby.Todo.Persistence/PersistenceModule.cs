@@ -11,8 +11,11 @@ namespace Netby.Todo.Persistence
         {
             services.AddDbContext<NetbyDbContext>(options =>
                 options.UseSqlServer(
-                    configuration.GetConnectionString("Local"))
-                );
+                    configuration.GetConnectionString("Local"),
+                    sqlOptions =>
+                        sqlOptions.MigrationsAssembly(typeof(NetbyDbContext).Assembly.FullName)
+                )
+            );
             return services;
         }
     }
