@@ -144,17 +144,6 @@ Database
 ![image](https://github.com/user-attachments/assets/7678a11e-3305-4309-a623-b89fad115e30)
 ![image](https://github.com/user-attachments/assets/25f73c4e-a300-4207-9fc2-b1a39813772f)
 
-
----
-
-## 📋 Características destacadas
-
-- Arquitectura limpia: Backend desacoplado y frontend separado
-- **Logging estructurado y transversal con [Serilog](https://serilog.net/):**  
-  Toda la solución utiliza Serilog para registrar logs estructurados, tanto en consola como en archivos (`logs/`).  
-  Puedes encontrar los logs en la carpeta `logs/` de cada proyecto.  
-  Es posible loguear desde cualquier capa simplemente inyectando `ILogger<T>`.
-
 ---
 
 ## 📝 **Configuración de Logging (Serilog)**
