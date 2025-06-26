@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netby.Todo.Persistence", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netby.Todo.Domain", "src\web-api\core\Netby.Todo.Domain\Netby.Todo.Domain.csproj", "{75E33C71-325A-4ECB-A3EA-5A4F141C7EC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netby.Todo.API", "src\web-api\presentation\Netby.Todo.API\Netby.Todo.API.csproj", "{2FB9240E-BB9F-4562-B9D7-57754B7517B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{75E33C71-325A-4ECB-A3EA-5A4F141C7EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75E33C71-325A-4ECB-A3EA-5A4F141C7EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75E33C71-325A-4ECB-A3EA-5A4F141C7EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB9240E-BB9F-4562-B9D7-57754B7517B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB9240E-BB9F-4562-B9D7-57754B7517B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB9240E-BB9F-4562-B9D7-57754B7517B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB9240E-BB9F-4562-B9D7-57754B7517B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{5897AE04-1548-4FDF-B11C-35739F6C3279} = {94F06AE5-C54C-49AB-86D3-98309C751ADC}
 		{B2DDAA9C-5CB7-4E4A-B9BE-ED831AC8F126} = {12767726-55BC-4C12-8FE7-8C2A32464B0D}
 		{75E33C71-325A-4ECB-A3EA-5A4F141C7EC5} = {97533132-C236-46D8-A430-1AD8DC15895C}
+		{2FB9240E-BB9F-4562-B9D7-57754B7517B3} = {5897AE04-1548-4FDF-B11C-35739F6C3279}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E37A82F-EB6C-4ADB-A581-D6FDAD52F79C}
