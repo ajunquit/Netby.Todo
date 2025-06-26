@@ -1,4 +1,4 @@
-﻿namespace Netby.Todo.Site.API.Services.API.Models
+﻿namespace Netby.Todo.Site.API.Services.API.Tasks.Models
 {
     public class CreateTaskRequest
     {

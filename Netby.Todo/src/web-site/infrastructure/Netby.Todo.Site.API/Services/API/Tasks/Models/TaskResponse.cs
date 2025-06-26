@@ -1,6 +1,6 @@
-﻿using Netby.Todo.Site.API.Services.API.Enums;
+﻿using Netby.Todo.Site.API.Services.API.Tasks.Enums;
 
-namespace Netby.Todo.Site.API.Services.API.Models
+namespace Netby.Todo.Site.API.Services.API.Tasks.Models
 {
     public class TaskResponse
     {

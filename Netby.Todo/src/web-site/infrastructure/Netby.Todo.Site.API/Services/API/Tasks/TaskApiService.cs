@@ -1,20 +1,27 @@
-﻿using Netby.Todo.Site.API.Services.API.Models;
+﻿using Netby.Todo.Site.API.Services.API.Tasks.Models;
 using System.Net.Http.Json;
 
-namespace Netby.Todo.Site.API.Services.API
+namespace Netby.Todo.Site.API.Services.API.Tasks
 {
     public class TaskApiService
     {
-        private IHttpClientFactory _httpClientFactory;
-
-        public TaskApiService(IHttpClientFactory httpClientFactory)
+        private readonly IHttpClientFactory _httpClientFactory;
+        
+        public TaskApiService(
+            IHttpClientFactory httpClientFactory
+            )
         {
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<List<TaskResponse>> GetTasksAsync()
+        public async Task<List<TaskResponse>> GetTasksAsync(string token)
         {
             var client = _httpClientFactory.CreateClient("TodoApi");
+            if (!string.IsNullOrWhiteSpace(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            }
+
             var result = await client.GetFromJsonAsync<List<TaskResponse>>("Tasks");
             return result ?? new List<TaskResponse>();
         }

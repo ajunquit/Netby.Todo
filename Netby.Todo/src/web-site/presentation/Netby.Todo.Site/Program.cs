@@ -10,7 +10,13 @@ builder.Services.AddHttpClient("TodoApi", client =>
     client.BaseAddress = new Uri("https://localhost:7077/api/v1/"); // Todo: Obtener desde el appsettings
 });
 
-builder.Services.AddSiteApiModule(builder.Configuration);
+
+// para hacer login
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services
+    .AddSiteApiModule(builder.Configuration);
 
 var app = builder.Build();
 
@@ -29,6 +35,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapFallbackToPage("/Login");
+
 app.MapRazorPages();
+
+app.UseSession();
 
 app.Run();

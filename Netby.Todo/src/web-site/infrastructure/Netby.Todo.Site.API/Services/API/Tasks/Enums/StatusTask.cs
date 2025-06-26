@@ -1,4 +1,4 @@
-﻿namespace Netby.Todo.Site.API.Services.API.Enums
+﻿namespace Netby.Todo.Site.API.Services.API.Tasks.Enums
 {
     public enum StatusTask
     {
