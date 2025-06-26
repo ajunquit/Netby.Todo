@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9CCBED63-D7DA-4355-A702-7DEFAE7AD0E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web-api", "web-api", "{94F06AE5-C54C-49AB-86D3-98309C751ADC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web-site", "web-site", "{E4CEF279-FBDF-4514-B8B4-5A91FE172FFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netby.Todo.Domain", "Netby.Todo.Domain\Netby.Todo.Domain.csproj", "{1A28185D-16A6-4DF8-B026-911AA8DB52C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A28185D-16A6-4DF8-B026-911AA8DB52C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A28185D-16A6-4DF8-B026-911AA8DB52C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A28185D-16A6-4DF8-B026-911AA8DB52C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A28185D-16A6-4DF8-B026-911AA8DB52C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94F06AE5-C54C-49AB-86D3-98309C751ADC} = {9CCBED63-D7DA-4355-A702-7DEFAE7AD0E2}
+		{E4CEF279-FBDF-4514-B8B4-5A91FE172FFF} = {9CCBED63-D7DA-4355-A702-7DEFAE7AD0E2}
+		{1A28185D-16A6-4DF8-B026-911AA8DB52C8} = {94F06AE5-C54C-49AB-86D3-98309C751ADC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E37A82F-EB6C-4ADB-A581-D6FDAD52F79C}
+	EndGlobalSection
+EndGlobal
