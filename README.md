@@ -36,7 +36,7 @@ src/
 ### 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
+git clone https://github.com/ajunquit/Netby.Todo.git
 cd tu_repositorio
 ```
 
@@ -148,7 +148,7 @@ dotnet test
 
 ## 📞 **Soporte**
 
-Para cualquier duda, contacta a: [tu-email@tudominio.com]
+Para cualquier duda, contacta a: [ajunquit@gmail.com]
 
 ---
 
