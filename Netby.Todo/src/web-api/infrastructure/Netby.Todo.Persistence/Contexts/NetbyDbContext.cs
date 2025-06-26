@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Netby.Todo.Persistence.Contexts
+﻿namespace Netby.Todo.Persistence.Contexts
 {
+    using Microsoft.EntityFrameworkCore;
+    using Netby.Todo.Domain.Entities;
     public class NetbyDbContext: DbContext
     {
-        public DbSet<Task> Users { get; set; }
+        public DbSet<TaskItem> Tasks { get; set; }
         public NetbyDbContext(DbContextOptions<NetbyDbContext> options) : base(options)
         {
 
