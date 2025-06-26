@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netby.Todo.Site", "src\web-site\presentation\Netby.Todo.Site\Netby.Todo.Site.csproj", "{AC68C512-B78D-434B-9734-5B945F0ABA5E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{65DE4820-4AD0-4849-80D5-D7EF3C66FDAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netby.Todo.Site.API", "src\web-site\infrastructure\Netby.Todo.Site.API\Netby.Todo.Site.API.csproj", "{A63E4BA5-2867-43E4-B927-D4ECB1193FD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{AC68C512-B78D-434B-9734-5B945F0ABA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC68C512-B78D-434B-9734-5B945F0ABA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC68C512-B78D-434B-9734-5B945F0ABA5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63E4BA5-2867-43E4-B927-D4ECB1193FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63E4BA5-2867-43E4-B927-D4ECB1193FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63E4BA5-2867-43E4-B927-D4ECB1193FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63E4BA5-2867-43E4-B927-D4ECB1193FD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,8 @@ Global
 		{11E0D2F0-C72F-4F0F-B7CD-5FC8974F27F1} = {11BD5553-892D-40B6-9474-4A1903D4A4D9}
 		{ED4651B7-0E49-4464-ACF5-CADECB9CEE59} = {E4CEF279-FBDF-4514-B8B4-5A91FE172FFF}
 		{AC68C512-B78D-434B-9734-5B945F0ABA5E} = {ED4651B7-0E49-4464-ACF5-CADECB9CEE59}
+		{65DE4820-4AD0-4849-80D5-D7EF3C66FDAA} = {E4CEF279-FBDF-4514-B8B4-5A91FE172FFF}
+		{A63E4BA5-2867-43E4-B927-D4ECB1193FD0} = {65DE4820-4AD0-4849-80D5-D7EF3C66FDAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E37A82F-EB6C-4ADB-A581-D6FDAD52F79C}
