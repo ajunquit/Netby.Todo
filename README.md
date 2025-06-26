@@ -20,13 +20,8 @@ El proyecto está compuesto por:
 ## 📦 **Estructura del repositorio**
 
 ```
-src/
-  web-api/
-    presentation/
-      Netby.Todo.API           # Proyecto API (backend)
-    site/
-      Netby.Todo.Site          # Proyecto Razor Pages (frontend)
-  ...
+![image](https://github.com/user-attachments/assets/17f67543-9b75-4f9b-91d2-2d9aeff62760)
+
 ```
 
 ---
