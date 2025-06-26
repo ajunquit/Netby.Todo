@@ -15,4 +15,10 @@
     <ProjectReference Include="..\..\core\Netby.Todo.Domain\Netby.Todo.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Tasks\Delete\" />
+    <Folder Include="Services\Tasks\GetById\" />
+    <Folder Include="Services\Tasks\GetAll\" />
+  </ItemGroup>
+
 </Project>

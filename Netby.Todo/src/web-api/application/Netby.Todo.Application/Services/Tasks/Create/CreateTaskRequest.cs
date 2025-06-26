@@ -1,4 +1,4 @@
-﻿namespace Netby.Todo.Application.Services.Tasks
+﻿namespace Netby.Todo.Application.Services.Tasks.Create
 {
     public class CreateTaskRequest
     {

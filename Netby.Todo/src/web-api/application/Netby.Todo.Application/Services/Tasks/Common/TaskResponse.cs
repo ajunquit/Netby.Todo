@@ -1,8 +1,8 @@
 ﻿using Netby.Todo.Domain.Enums;
 
-namespace Netby.Todo.Application.Services.Tasks
+namespace Netby.Todo.Application.Services.Tasks.Common
 {
-    public class CreateTaskResponse
+    public class TaskResponse
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

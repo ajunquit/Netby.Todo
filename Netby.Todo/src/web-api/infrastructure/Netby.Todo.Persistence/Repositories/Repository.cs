@@ -18,7 +18,7 @@
             return _entities.Count();
         }
 
-        public bool Delete(string id)
+        public bool Delete(Guid id)
         {
             T entity = Get(id);
             if (entity != null)
@@ -29,7 +29,7 @@
             return false;
         }
 
-        public T Get(string id)
+        public T Get(Guid id)
         {
             return _entities.Find(id);
         }
