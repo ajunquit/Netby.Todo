@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\core\Netby.Todo.Domain\Netby.Todo.Domain.csproj" />
+    <ProjectReference Include="..\..\application\Netby.Todo.Application\Netby.Todo.Application.csproj" />
   </ItemGroup>
 
 </Project>
