@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Netby.Todo.Domain\Netby.Todo.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
