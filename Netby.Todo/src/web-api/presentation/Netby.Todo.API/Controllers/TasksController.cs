@@ -31,5 +31,20 @@ namespace Netby.Todo.API.Controllers
             if (updatedTask == null) return NotFound();
             return Ok(updatedTask);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<TaskResponse>>> GetAll()
+        {
+            var tasks = await _taskService.GetAllTasksAsync();
+            return Ok(tasks);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var deleted = await _taskService.DeleteTaskAsync(id);
+            if (!deleted) return NotFound();
+            return NoContent();
+        }
     }
 }

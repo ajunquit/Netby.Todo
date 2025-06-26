@@ -40,6 +40,22 @@ namespace Netby.Todo.Application.Services.Tasks
             return await Task.FromResult(MapTaskResponse(taskItem));
         }
 
+        public async Task<IEnumerable<TaskResponse>> GetAllTasksAsync()
+        {
+            var tasks = _unitOfWork.Tasks.GetAll();
+            return await Task.FromResult(tasks.Select(MapTaskResponse));
+        }
+
+        public async Task<bool> DeleteTaskAsync(Guid id)
+        {
+            var taskItem = _unitOfWork.Tasks.Get(id);
+            if (taskItem == null) return false;
+
+            _unitOfWork.Tasks.Delete(taskItem.Id);
+            int result = _unitOfWork.Save();
+            return await Task.FromResult(result > 0);
+        }
+
         private static TaskItem CreateTaskItem(CreateTaskRequest request)
         {
             return new TaskItem

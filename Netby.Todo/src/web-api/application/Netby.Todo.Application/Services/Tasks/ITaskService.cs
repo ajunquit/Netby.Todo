@@ -8,5 +8,7 @@ namespace Netby.Todo.Application.Services.Tasks
     {
         Task<TaskResponse> CreateTaskAsync(CreateTaskRequest request);
         Task<TaskResponse> UpdateTaskAsync(Guid id, UpdateTaskRequest request);
+        Task<IEnumerable<TaskResponse>> GetAllTasksAsync();
+        Task<bool> DeleteTaskAsync(Guid id);
     }
 }
