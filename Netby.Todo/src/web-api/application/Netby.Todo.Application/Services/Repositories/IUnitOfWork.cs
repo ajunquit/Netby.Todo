@@ -3,6 +3,7 @@
     public interface IUnitOfWork
     {
         ITaskRepository Tasks { get; }
-        Task<int> Save(CancellationToken cancellationToken);
+        int Save();
+        //Task<int> Save(CancellationToken cancellationToken);
     }
 }
