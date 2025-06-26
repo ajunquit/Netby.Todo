@@ -3,7 +3,10 @@
 @{
     ViewData["Title"] = "Tareas";
 }
-<h1>Tareas</h1>
+<h1>Tasks</h1>
+
+<button type="button" class="btn btn-success mb-2" onclick="showModal()">New Task</button>
+
 <table class="table">
     <thead>
         <tr>
@@ -23,17 +26,101 @@
                 <td>@task.ExpirationDate.ToShortDateString()</td>
                 <td>@task.Status</td>
                 <td>
-                    <!-- Botones para Editar y Eliminar -->
+                    <button type="button" class="btn btn-sm btn-info"
+                            onclick="showModal('@task.Id', '@task.Title', '@task.Description', '@task.ExpirationDate.ToString("yyyy-MM-dd")')">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-sm btn-danger"
+                            onclick="showDeleteModal('@task.Id')">
+                        Delete
+                    </button>
                 </td>
+
             </tr>
         }
     </tbody>
 </table>
 
-<!-- Formulario para crear tarea rápida -->
-<form method="post">
-    <input asp-for="NewTask.Title" placeholder="Title" required />
-    <input asp-for="NewTask.Description" placeholder="Description" required />
-    <input asp-for="NewTask.ExpirationDate" type="date" required />
-    <button type="submit">Agregar</button>
-</form>
+<!-- Modal para Crear/Editar Tarea -->
+<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="modalForm" method="post" asp-page-handler="Save">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskModalLabel">@Model.ModalTitle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" asp-for="TaskModal.Id" />
+                    <div class="mb-3">
+                        <label asp-for="TaskModal.Title" class="form-label"></label>
+                        <input asp-for="TaskModal.Title" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="TaskModal.Description" class="form-label"></label>
+                        <input asp-for="TaskModal.Description" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="TaskModal.ExpirationDate" class="form-label"></label>
+                        <input asp-for="TaskModal.ExpirationDate" type="date" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <select asp-for="TaskModal.Status" class="form-control">
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmación de Eliminación -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Delete">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete</h5>
+                </div>
+                <div class="modal-body">
+                    ¿Are you sure to delete this task?
+                    <input type="hidden" asp-for="DeleteTaskId" />
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<script>
+    function showModal(id, title, description, expirationDate) {
+        document.getElementById("TaskModal_Id").value = id || "";
+        document.getElementById("TaskModal_Title").value = title || "";
+        document.getElementById("TaskModal_Description").value = description || "";
+        document.getElementById("TaskModal_ExpirationDate").value = expirationDate || "";
+        var myModal = new bootstrap.Modal(document.getElementById('taskModal'));
+        myModal.show();
+    }
+
+    function showDeleteModal(id) {
+        document.getElementById("DeleteTaskId").value = id;
+        var myModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        myModal.show();
+    }
+</script>
