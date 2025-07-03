@@ -42,9 +42,9 @@ namespace Netby.Todo.Application.Tests.Tasks
             var result = await _service.CreateTaskAsync(request);
 
             // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual(request.Title, result.Title);
-            Assert.AreEqual(request.Description, result.Description);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(request.Title, Is.EqualTo(result.Title));
+            Assert.That(request.Description, Is.EqualTo(result.Description));
 
             // Verify
             _mockRepo.Verify(r => r.Insert(It.IsAny<TaskItem>()), Times.Once);
