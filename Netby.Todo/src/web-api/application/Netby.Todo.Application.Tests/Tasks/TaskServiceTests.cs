@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using Microsoft.Extensions.Logging;
+using Moq;
 using Netby.Todo.Application.Services.Repositories;
 using Netby.Todo.Application.Services.Tasks;
 using Netby.Todo.Application.Services.Tasks.Create;
@@ -10,6 +11,7 @@ namespace Netby.Todo.Application.Tests.Tasks
     {
         private Mock<ITaskRepository> _mockRepo;
         private Mock<IUnitOfWork> _mockUnitOfWork;
+        private Mock<ILogger<TaskService>> _mockILogger;
         private TaskService _service;
 
         [SetUp]
@@ -17,7 +19,8 @@ namespace Netby.Todo.Application.Tests.Tasks
         {
             _mockRepo = new Mock<ITaskRepository>();
             _mockUnitOfWork = new Mock<IUnitOfWork>();
-            _service = new TaskService(_mockUnitOfWork.Object);
+            _mockILogger = new Mock<ILogger<TaskService>>();
+            _service = new TaskService(_mockUnitOfWork.Object, _mockILogger.Object);
         }
 
         [Test]
